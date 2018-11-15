@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta name="google-site-verification" content="PDzzQqxy5RWNOb9YftS2WGk9Z1zhKdUG3Dm0TqyRqGA" />
         <title>Clockwork Sun</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,8 +27,16 @@
                 <a href="edu" class="w3-bar-item w3-button w3-hover-white">Education</a>
                 <a href="photography" class="w3-bar-item w3-button w3-hover-white">Photography</a>
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white">Blog</a>
-                <input type="text" class="w3-bar-item w3-input w3-dark-gray" placeholder="Search...">
-                <a href="#" class="w3-bar-item w3-button w3-orange"><i class="fa fa-search"></i></a>
+                <form id="frmSearch" class="search2" method="get" action="default.html">
+                <input id="searchBar" type="search" class="w3-bar-item w3-input w3-dark-gray" placeholder="Search...">
+                <input type=submit class="w3-bar-item w3-button w3-orange">
+                </form>
+                <script type="text/javascript">
+                    document.getElementById('frmSearch').onsubmit = function() {
+                        window.location = 'https://www.google.com/search?q=site:clockworksun.com ' + document.getElementById('searchBar').value;
+                        return false;
+                    }
+                </script>
             </div>
         </div>
 
