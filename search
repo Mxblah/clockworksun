@@ -29,7 +29,7 @@
                 <a href="photography" class="w3-bar-item w3-button w3-hover-white">Photography</a>
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white">Blog</a>
                 <!-- Search bar -->
-                <div class="w3-bar-item w3-right" style="width:20%">
+                <div class="w3-bar-item w3-right w3-mobile" style="width:25%">
                     <script>
                         (function() {
                             var cx = '010330943142173453844:ou80anxgqc4';
