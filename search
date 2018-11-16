@@ -15,6 +15,7 @@
         <!-- Navbar -->
         <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-left-align">
+                <!-- Regular links -->
                 <a href="https://clockworksun.com" class="w3-bar-item w3-button w3-orange w3-hover-white">Home</a>
                 <div class="w3-dropdown-hover">
                     <button class="w3-button w3-hover-white">About <i class="fa fa-caret-down"></i></button>
@@ -27,16 +28,21 @@
                 <a href="edu" class="w3-bar-item w3-button w3-hover-white">Education</a>
                 <a href="photography" class="w3-bar-item w3-button w3-hover-white">Photography</a>
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white">Blog</a>
-                <form id="frmSearch" class="w3-right" method="get" action="default.html">
-                <input id="searchBar" type="search" class="w3-bar-item w3-input w3-dark-gray" placeholder="Search...">
-                <button type=submit class="w3-bar-item w3-button w3-orange"><i class="fa fa-search"></i></button>
-                </form>
-                <script type="text/javascript">
-                    document.getElementById('frmSearch').onsubmit = function() {
-                        window.location = 'https://www.google.com/search?q=site:clockworksun.com ' + document.getElementById('searchBar').value;
-                        return false;
-                    }
-                </script>
+                <!-- Search bar -->
+                <div class="w3-bar-item w3-right" style="width:20%">
+                    <script>
+                        (function() {
+                            var cx = '010330943142173453844:ou80anxgqc4';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
+                </div>
             </div>
         </div>
         <br>
