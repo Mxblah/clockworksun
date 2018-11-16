@@ -15,8 +15,39 @@
         <!-- Navbar -->
         <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-left-align">
+                <img class="w3-bar-item w3-orange" src="media/clockworksun-128.png" style="max-height:64px;max-width:64px;">
                 <!-- Regular links -->
                 <a href="https://clockworksun.com" class="w3-bar-item w3-button w3-orange w3-hover-white">Home</a>
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-hover-white w3-hide-small">About <i class="fa fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hide-small">
+                        <a href="about" class="w3-bar-item w3-button w3-hover-orange">About Me</a>
+                        <a href="about-site" class="w3-bar-item w3-button w3-hover-orange">About This Site</a>
+                    </div>
+                </div>
+                <a href="tech" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Tech</a>
+                <a href="edu" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Education</a>
+                <a href="photography" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Photography</a>
+                <a href="blog" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Blog</a>
+                <!-- Search bar -->
+                <div class="w3-bar-item w3-right w3-mobile w3-hide-small" style="width:25%">
+                        <script>
+                        (function() {
+                            var cx = '010330943142173453844:ou80anxgqc4';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                    </script>
+                    <gcse:searchbox-only></gcse:searchbox-only>
+                </div>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="changeBar()">&#9776;</a>
+            </div>
+
+            <div id="smallBar" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
                 <div class="w3-dropdown-hover">
                     <button class="w3-button w3-hover-white">About <i class="fa fa-caret-down"></i></button>
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
@@ -31,24 +62,34 @@
                 <!-- Search bar -->
                 <div class="w3-bar-item w3-right w3-mobile" style="width:25%">
                     <script>
-                        (function() {
-                            var cx = '010330943142173453844:ou80anxgqc4';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
-                    </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
-                </div>
+                    (function() {
+                        var cx = '010330943142173453844:ou80anxgqc4';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:searchbox-only></gcse:searchbox-only>
             </div>
+
+            <script>
+                function changeBar() {
+                    var x = document.getElementById("smallBar");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else { 
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+                </script>
         </div>
 
         <!-- Page content -->
         <header class="w3-container w3-theme w3-padding" id="mainHeader">
-            <h1><br>Under construction; more coming soon!</h1>
+            <h1>Under construction; more coming soon!</h1>
         </header>
 
         <!-- TODO: add remote git source on server side and push content to prod using git push -->
