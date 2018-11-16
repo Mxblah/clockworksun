@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
-    <body id="MainPage">
+    <body id="SearchResults">
 
         <!-- Navbar -->
         <div class="w3-top">
@@ -37,28 +37,23 @@
                         return false;
                     }
                 </script>
-                <!-- <div class="w3-bar-item w3-right">
-                    <script>
-                        (function() {
-                            var cx = '010330943142173453844:ou80anxgqc4';
-                            var gcse = document.createElement('script');
-                            gcse.type = 'text/javascript';
-                            gcse.async = true;
-                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                            var s = document.getElementsByTagName('script')[0];
-                            s.parentNode.insertBefore(gcse, s);
-                        })();
-                    </script>
-                    <gcse:searchbox-only></gcse:searchbox-only>
-                </div> -->
             </div>
         </div>
+        <br>
 
-        <!-- Something else -->
-        <header class="w3-container w3-theme w3-padding" id="mainHeader">
-            <h1><br>Under construction; more coming soon!</h1>
-        </header>
+        <!-- Search Results -->
+        <script>
+            (function() {
+              var cx = '010330943142173453844:ou80anxgqc4';
+              var gcse = document.createElement('script');
+              gcse.type = 'text/javascript';
+              gcse.async = true;
+              gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+              var s = document.getElementsByTagName('script')[0];
+              s.parentNode.insertBefore(gcse, s);
+            })();
+          </script>
+          <gcse:searchresults-only></gcse:searchresults-only>
 
-        <!-- TODO: add remote git source on server side and push content to prod using git push -->
     </body>
 </html>
