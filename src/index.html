@@ -16,7 +16,7 @@
         <div class="w3-top">
             <div class="w3-bar w3-theme-d2 w3-left-align">
                 <!-- Regular links -->
-                <a href="https://clockworksun.com" class="w3-bar-item w3-button w3-padding-0 w3-hover-opacity"><img src="media/clockworksun-128.png" style="width:100%;max-width:64px;"></a>
+                <a href="https://clockworksun.com" class="w3-bar-item w3-button w3-orange w3-hover-white">Home</a>
                 <div class="w3-dropdown-hover">
                     <button class="w3-button w3-hover-white w3-hide-small">About <i class="fa fa-caret-down"></i></button>
                     <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hide-small">
@@ -29,6 +29,15 @@
                 <a href="photography" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Photography</a>
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white w3-hide-small">Blog</a>
                 <!-- Search bar -->
+                <input type="search" class="w3-bar-item w3-input" placeholder="Search...">
+                <input type="submit" class="w3-bar-item w3-input w3-button">
+                <script type="text/javascript">
+                    document.getElementById('frmSearch').onsubmit = function() {
+                        window.location = 'http://www.google.com/search?q=site:clockworksun.com ' + document.getElementById('txtSearch').value;
+                        return false;
+                    }
+                </script>
+                <!-- Google CSE bar (not currently used)
                 <div class="w3-bar-item w3-right w3-mobile w3-hide-small" style="width:25%">
                         <script>
                         (function() {
@@ -43,9 +52,11 @@
                     </script>
                     <gcse:searchbox-only></gcse:searchbox-only>
                 </div>
+                -->
                 <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="changeBar()">&#9776;</a>
             </div>
 
+            <!-- Mobile (small) bar -->
             <div id="smallBar" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
                 <div class="w3-dropdown-hover">
                     <button class="w3-button w3-hover-white">About <i class="fa fa-caret-down"></i></button>
