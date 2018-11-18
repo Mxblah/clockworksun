@@ -13,7 +13,7 @@
     <body id="MainPage">
 
         <!-- Navbar -->
-        <div class="w3-top w3-card-2">
+        <nav class="w3-top w3-card-2">
             <div class="w3-bar w3-black w3-left-align">
                 <!-- Left spacing -->
                 <div class="w3-bar-item w3-padding-16 w3-hide-small" style="width:15%"></div>
@@ -33,7 +33,7 @@
                     </script>
                 <!-- Regular links -->
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-right w3-padding-16">Blog</a>
-                <a href="photography" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-right w3-padding-16">Photography</a>
+                <a href="photo" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-right w3-padding-16">Photography</a>
                 <a href="edu" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-right w3-padding-16">Education</a>
                 <a href="tech" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-right w3-padding-16">Tech</a>
                 <div class="w3-dropdown-hover w3-right">
@@ -57,7 +57,7 @@
                 </div>
                 <a href="tech" class="w3-bar-item w3-button w3-hover-white">Tech</a>
                 <a href="edu" class="w3-bar-item w3-button w3-hover-white">Education</a>
-                <a href="photography" class="w3-bar-item w3-button w3-hover-white">Photography</a>
+                <a href="photo" class="w3-bar-item w3-button w3-hover-white">Photography</a>
                 <a href="blog" class="w3-bar-item w3-button w3-hover-white">Blog</a>
                 <form id="frmSearch" class="w3-bar-item" method="get" action="default.html">
                     <table class="w3-table">
@@ -85,11 +85,24 @@
                     }
                 }
             </script>
-        </div>
+        </nav>
 
         <!-- Page content -->
+
+        <!-- Header -->
         <header class="w3-container w3-padding" id="mainHeader">
-            <h1><br>Under construction; more coming soon!</h1>
+            <h1><br>Add a header to the page here.</h1>
         </header>
+
+        <!-- Main content, bracketed by spacing on either side -->
+        <div class="w3-cell-row">
+            <div class="w3-cell" style="width:15%"></div>
+            <section id="mainContent" class="w3-cell">
+                <div class="w3-container w3-green">
+                    <p>Add main content to the page here.</p>
+                </div>
+            </section>
+            <div class="w3-cell" style="width:15%"></div>            
+        </div>
     </body>
 </html>
