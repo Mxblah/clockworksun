@@ -9,6 +9,12 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
         <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+        <style>
+            .tx-hammer {
+                font-family: 'Hammersmith One', sans-serif;
+            }
+        </style>
     </head>
     <body id="MainPage">
 
@@ -90,18 +96,26 @@
         <!-- Page Content -->
 
         <!-- Header -->
-        <header id="mainHeader">
-            <h1 class="w3-container w3-green"><br>Add a header to the page here.</h1>
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
+            <h1 class="w3-xxxlarge tx-hammer"><br><b>ADD A MAIN TITLE HERE</b></h1>
+            <h4 class="tx-hammer"><b>ADD A SUBTITLE HERE</b></h4>
         </header>
 
         <!-- Main page content -->
         <main id="mainContent">
 
-            <div class="w3-content">
-                <div class="w3-container w3-green">
-                    <p>Add main content to the page here.</p>
+            <!-- First Section -->
+            <section class="w3-container w3-content w3-row-padding w3-padding-64">
+                <div class="w3-twothird">
+                    <h1>Lorem Ipsum</h1>
+                    <h5 class="w3-padding-32 w3-margin-right"><span class="tx-hammer">Lorem Ipsum</span> dolor sit amet, consectetur adipiscing elit.<br>Nullam elementum aliquam ex, eu varius nisl vestibulum in. Donec pellentesque nunc vel libero gravida, ac fermentum sapien volutpat. Fusce lacus est, scelerisque eget erat ac, dignissim luctus lacus.</h5>
+                    <p class="w3-margin-right w3-text-gray">Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer interdum, lacus sed auctor pulvinar, sem mauris volutpat est, vel rhoncus mauris purus et ante. Nam dui urna, fermentum vitae tempor in, sagittis quis augue. Sed iaculis rhoncus purus, mollis tempus nulla euismod in. Morbi varius purus ac felis placerat, vel vestibulum lectus vestibulum.</p>
                 </div>
-            </div>
+
+                <div class="w3-third w3-center">
+                    <img src="media/clockworksun-512.png" alt="Clockwork Sun" class="w3-round-xlarge w3-image w3-card-4">
+                </div>
+            </section>
 
         </main>
 
