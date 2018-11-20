@@ -1,4 +1,5 @@
 .github
+favicon.ico
+pushToMaster.sh
 src/media
 src/google007cbf9a3e8799d5.html
-pushToMaster.sh
