@@ -1,3 +1,4 @@
+/* --- Flexbox styles --- */
 .site {
     display: flex;
     min-height: 100vh;
@@ -6,9 +7,27 @@
 .site-content {
     flex: 1;
 }
+
+/* ---  Text styles --- */
 .tx-hammer {
     font-family: 'Hammersmith One', sans-serif;
 }
 .tx-huge {
     font-size: 200px;
+}
+
+/* --- Custom styles --- */
+
+/* - Hover effects - */
+.cs-hover-shadow-8 {transition: 0.2s}
+.cs-hover-shadow-8:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 12px 40px 0 rgba(0,0,0,0.19)!important
+}
+.cs-hover-shadow-16 {transition: 0.2s}
+.cs-hover-shadow-16:hover {
+    box-shadow:0 16px 32px 0 rgba(0,0,0,0.2),0 24px 80px 0 rgba(0,0,0,0.19)!important
+}
+.cs-hover-opacity-light {transition: 0.2s}
+.cs-hover-opacity-light:hover {
+    opacity:0.80;
 }
