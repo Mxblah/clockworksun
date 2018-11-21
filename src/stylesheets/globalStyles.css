@@ -36,5 +36,14 @@
     opacity:0.80;
 }
 
-/* - Custom hiding */
+/* - Custom spacing - */
+.cs-padding-top-32 {
+    padding-top: 32px;
+}
+
+.cs-padding-bottom-32 {
+    padding-bottom: 32px;
+}
+
+/* - Custom element hiding */
 @media (max-width:1200px){.cs-hide-1200{display:none!important}}
