@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Page template version 1.1 -->
+    <head>
+        <title>Clockwork Sun - Tech</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+        <link rel="stylesheet" href="stylesheets/globalStyles.css">
+    </head>
+    <body id="MainPage" class="site">
+
+        <!-- Navbar -->
+        <nav class="w3-top w3-card-2">
+            <div class="w3-bar w3-black w3-left-align">
+                <!-- Left spacing -->
+                <div class="w3-bar-item w3-padding-16 w3-hide-small w3-hide-medium cs-hide-1200" style="width:15%"></div>
+                <a href="https://clockworksun.com" class="w3-bar-item w3-button w3-hover-white w3-padding-16">Clockwork Sun</a>
+                <!-- Right spacing -->
+                <div class="w3-bar-item w3-padding-16 w3-hide-small w3-hide-medium w3-right cs-hide-1200" style="width:15%"></div>
+                <!-- Search bar -->
+                <form id="frmSearch" class="w3-right w3-hide-small w3-hide-medium" method="get" action="default.html">
+                    <input id="searchBar" type="search" class="w3-bar-item w3-input w3-border-0 w3-padding-16" placeholder="Search...">
+                    <button type=submit class="w3-bar-item w3-button w3-hover-white w3-padding-16"><i class="fas fa-search"></i></button>
+                    </form>
+                    <script type="text/javascript">
+                        document.getElementById('frmSearch').onsubmit = function() {
+                            window.location = 'https://www.google.com/search?q=site:clockworksun.com ' + document.getElementById('searchBar').value;
+                            return false;
+                        }
+                    </script>
+                <!-- Regular links -->
+                <a href="blog" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-hide-medium w3-right w3-padding-16">Blog</a>
+                <a href="work" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-hide-medium w3-right w3-padding-16">Media</a>
+                <a href="edu" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-hide-medium w3-right w3-padding-16">Education</a>
+                <a href="tech" class="w3-bar-item w3-button w3-hover-white w3-hide-small w3-hide-medium w3-right w3-padding-16">Tech</a>
+                <div class="w3-dropdown-hover w3-right">
+                    <button class="w3-button w3-hover-white w3-hide-small w3-hide-medium w3-padding-16">About <i class="fas fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block w3-hide-small w3-hide-medium w3-padding-16">
+                        <a href="about" class="w3-bar-item w3-button w3-hover-light-grey">About Me</a>
+                        <a href="about-site" class="w3-bar-item w3-button w3-hover-light-grey">About This Site</a>
+                    </div>
+                </div>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-large w3-hide-large" onclick="changeBar()">&#9776;</a>
+            </div>
+
+            <!-- Mobile (small) bar -->
+            <div id="smallBar" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large">
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button w3-hover-white">About <i class="fas fa-caret-down"></i></button>
+                    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                        <a href="about" class="w3-bar-item w3-button w3-hover-light-grey">About Me</a>
+                        <a href="about-site" class="w3-bar-item w3-button w3-hover-light-grey">About This Site</a>
+                    </div>
+                </div>
+                <a href="tech" class="w3-bar-item w3-button w3-hover-white">Tech</a>
+                <a href="edu" class="w3-bar-item w3-button w3-hover-white">Education</a>
+                <a href="work" class="w3-bar-item w3-button w3-hover-white">Media</a>
+                <a href="blog" class="w3-bar-item w3-button w3-hover-white">Blog</a>
+                <form id="frmSearch" class="w3-bar-item" method="get" action="default.html">
+                    <table class="w3-table">
+                        <tr>
+                            <td style="width:80%"><input id="searchBar" type="search" class="w3-input w3-border-0" placeholder="Search..."></td>
+                            <td style="width:20%"><button type=submit class="w3-button w3-hover-white"><i class="fas fa-search"></i></button></td>
+                        </tr>
+                    </table>
+                    </form>
+                    <script type="text/javascript">
+                        document.getElementById('frmSearch').onsubmit = function() {
+                            window.location = 'https://www.google.com/search?q=site:clockworksun.com ' + document.getElementById('searchBar').value;
+                            return false;
+                        }
+                    </script>
+            </div>
+
+            <script>
+                function changeBar() {
+                    var x = document.getElementById("smallBar");
+                    if (x.className.indexOf("w3-show") == -1) {
+                        x.className += " w3-show";
+                    } else { 
+                        x.className = x.className.replace(" w3-show", "");
+                    }
+                }
+            </script>
+        </nav>
+
+        <!-- Page Content -->
+
+        <!-- Header -->
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
+            <h1 class="w3-xxxlarge tx-hammer"><br><b>TECHNOLOGY</b></h1>
+            <h4 class="tx-hammer"><b>SERVERS, DESKTOPS, AND MORE</b></h4>
+        </header>
+
+        <!-- Main page content -->
+        <main id="mainContent" class="site-content">
+
+            <!-- First Section -->
+            <section class="w3-container w3-content w3-row-padding w3-padding-64">
+                <div class="w3-twothird">
+                    <h1>Lorem Ipsum</h1>
+                    <h5 class="w3-padding-32 w3-margin-right"><span class="tx-hammer">Lorem Ipsum</span> dolor sit amet, consectetur adipiscing elit.<br>Nullam elementum aliquam ex, eu varius nisl vestibulum in. Donec pellentesque nunc vel libero gravida, ac fermentum sapien volutpat. Fusce lacus est, scelerisque eget erat ac, dignissim luctus lacus.</h5>
+                    <p class="w3-margin-right w3-text-gray">Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer interdum, lacus sed auctor pulvinar, sem mauris volutpat est, vel rhoncus mauris purus et ante. Nam dui urna, fermentum vitae tempor in, sagittis quis augue. Sed iaculis rhoncus purus, mollis tempus nulla euismod in.</p>
+                </div>
+
+                <div class="w3-third w3-center">
+                    <a href="#"><img src="media/clockworksun-512.png" alt="Clockwork Sun" class="w3-round-xlarge w3-image w3-card-4 cs-hover-opacity-light"></a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- End Page Content -->
+
+        <!-- Footer -->
+        <footer class="w3-container w3-center w3-black w3-padding-32 w3-xlarge w3-cell-bottom">
+            <!-- Self links -->
+            <a href="privacy"><i class="fas fa-shield-alt"></i></a>
+            <a href="hosting"><i class="fas fa-server"></i></a>
+            <a href="https://github.com/Mrblah9990/clockworksun"><i class="fab fa-github"></i></a>
+            &nbsp;
+            <!-- Affiliate/subsidiary links -->
+            <a href="https://journeywithjoeandjane.com"><i class="fas fa-shuttle-van"></i></a>
+            &nbsp;
+            <!-- Third party links -->
+            <a href="https://www.mtu.edu"><i class="fas fa-graduation-cap"></i></a>
+            <a href="https://www.w3schools.com/w3css"><i class="fas fa-code"></i></a>
+            <a href="https://fontawesome.com"><i class="fab fa-font-awesome"></i></a>
+            <p class=w3-medium>
+                <i class="fas fa-copyright"></i> Clockwork Sun 2018<br>
+                Contact the webmaster at <a href="mailto:admin@clockworksun.com">admin@clockworksun.com</a>
+            </p>
+        </footer>
+
+    </body>
+</html>
