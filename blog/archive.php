@@ -14,14 +14,14 @@
     <body id="MainPage" class="site">
 
         <!-- Navbar -->
-        <?php include "/navbar.html"; ?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/navbar.html"); ?>
 
         <!-- Page Content -->
 
         <!-- Header -->
-        <header id="mainHeader" class="w3-container w3-center w3-green w3-padding-32">
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
             <h1 class="w3-xxxlarge tx-hammer"><br><b>CLOCKWORK SUN BLOG</b></h1>
-            <h4 class="tx-hammer"><b>CURRENTLY IN BETA</b></h4>
+            <h4 class="tx-hammer"><b>ARCHIVE (BETA)</b></h4>
         </header>
 
         <!-- Main page content -->
@@ -31,13 +31,17 @@
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <?php
                     //Finds all posts and sorts by modified time.
-                    $posts = array_merge(glob("posts/*.html"));
-                    $posts = array_combine($posts, array_map("filemtime", $posts));
-                    arsort($posts);
-                    foreach($posts as $post) {
-                        echo "<a href=$post>".basename($post)."</a>";
-                    }
+                    $posts = glob('posts/*.html');
+                    usort($posts, function($a, $b) {
+                        return filemtime($a) < filemtime($b);
+                    });
                 ?>
+                <!-- Returns all posts sorted by last modified. Will make this prettier later. -->
+                <ol> 
+                    <?php foreach ($posts as $post) { ?>
+                        <li><a href="<?php echo "\/posts\/", $post ?>"><?php echo $post ?></a></li>
+                    <?php } ?>
+                </ol> 
             </section>
 
         </main>
@@ -45,7 +49,7 @@
         <!-- End Page Content -->
 
         <!-- Footer -->
-        <?php include "/footer.html"; ?>
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/footer.html"); ?>
 
     </body>
 </html>
