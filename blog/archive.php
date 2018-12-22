@@ -27,6 +27,12 @@
         <!-- Main page content -->
         <main id="mainContent" class="site-content">
             
+            <!-- Disclaimer section -->
+            <section class="w3-container w3-content w3-row-padding cs-padding-top-32">
+                <h3 class="tx-hammer">Sorry it's a little rough.</h3>
+                <p>I'm working on cleaning up this page and making it better, but for now, it's functional. More updates soon!<br>Latest post on top, oldest on bottom.</p>
+            </section>
+
             <!-- Link section -->
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <?php
