@@ -39,7 +39,7 @@
                 <!-- Returns all posts sorted by last modified. Will make this prettier later. -->
                 <ol> 
                     <?php foreach ($posts as $post) { ?>
-                        <li><a href="<?php echo "\/posts\/", $post ?>"><?php echo $post ?></a></li>
+                        <li><a href="<?php echo $post ?>"><?php echo $post ?></a></li>
                     <?php } ?>
                 </ol> 
             </section>
