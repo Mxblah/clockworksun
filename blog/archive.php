@@ -36,8 +36,9 @@
             <!-- Link section -->
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <?php
-                    //Finds all posts and sorts by modified time.
-                    $posts = glob('posts/*.html');
+                    //Finds all posts in specified year and sorts by modified time.
+                    $year = '2018';
+                    $posts = glob("posts/$year/*/*.html");
                     usort($posts, function($a, $b) {
                         return filemtime($a) < filemtime($b);
                     });
