@@ -36,21 +36,30 @@
             <!-- Link section -->
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <?php
-                    //Finds all posts in specified year and sorts by modified time.
-                    $year = '2018';
-                    $posts = glob("posts/$year/*/*.html");
-                    usort($posts, function($a, $b) {
-                        return filemtime($a) < filemtime($b);
-                    });
                     //Declares HTML as the suffix to strip from names
                     $suffix = '.html';
+                    //Grabs all years in the posts directory and separates them.
+                    $years = glob("posts/*");
+                    rsort($years);
+                    foreach ($years as $year) {
                 ?>
-                <!-- Returns all posts sorted by last modified. Will make this prettier later. -->
-                <ol> 
-                    <?php foreach ($posts as $post) { ?>
-                        <li><span class="w3-text-grey"><?php echo "(" . date("F jS, Y", filemtime($post)) . ") " ?></span><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
-                    <?php } ?>
-                </ol> 
+                <div class="w3-container w3-card-4 w3-round-xlarge">
+                    <h3 class="tx-hammer"><b><?php echo basename($year) ?></b></h4>
+                    <?php
+                        //Finds all posts in the year and sorts by modified time.
+                        $posts = glob("$year/*/*.html");
+                        usort($posts, function($a, $b) {
+                            return filemtime($a) < filemtime($b);
+                        });
+                    ?>
+                    <!-- Returns all posts in the year sorted by last modified. -->
+                    <ul> 
+                        <?php foreach ($posts as $post) { ?>
+                            <li><span class="w3-text-grey"><?php echo "(" . date("F jS, Y", filemtime($post)) . ") " ?></span><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
+                        <?php } ?>
+                    </ul> 
+                </div>
+                <?php } ?>
             </section>
 
         </main>
