@@ -41,11 +41,13 @@
                     usort($posts, function($a, $b) {
                         return filemtime($a) < filemtime($b);
                     });
+                    //Declares HTML as the suffix to strip from names
+                    $suffix = '.html';
                 ?>
                 <!-- Returns all posts sorted by last modified. Will make this prettier later. -->
                 <ol> 
                     <?php foreach ($posts as $post) { ?>
-                        <li><a href="<?php echo $post ?>"><?php echo $post ?></a></li>
+                        <li><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
                     <?php } ?>
                 </ol> 
             </section>
