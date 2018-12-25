@@ -47,7 +47,7 @@
                 <!-- Returns all posts sorted by last modified. Will make this prettier later. -->
                 <ol> 
                     <?php foreach ($posts as $post) { ?>
-                        <li><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
+                        <li><span class="w3-text-grey"><?php echo "(" . date("F jS, Y", filemtime($post)) . ") " ?></span><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
                     <?php } ?>
                 </ol> 
             </section>
