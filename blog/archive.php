@@ -53,11 +53,13 @@
                         });
                     ?>
                     <!-- Returns all posts in the year sorted by last modified. -->
-                    <ul> 
-                        <?php foreach ($posts as $post) { ?>
-                            <li><span class="w3-text-grey"><?php echo "(" . date("F jS, Y", filemtime($post)) . ") " ?></span><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></li>
-                        <?php } ?>
-                    </ul> 
+                    <?php foreach ($posts as $post) { ?>
+                        <p>
+                            <span class="w3-tag w3-round w3-orange"><?php echo date("F jS, Y", filemtime($post)) ?></span>
+                            <span class="w3-tag w3-round w3-light-grey"><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></span>
+                            <br>
+                        </p>
+                    <?php } ?>
                 </div>
                 <?php } ?>
             </section>
