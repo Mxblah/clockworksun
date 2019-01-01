@@ -46,7 +46,7 @@
                     rsort($years);
                     foreach ($years as $year) {
                 ?>
-                <div class="w3-container w3-card-4 w3-round-xlarge">
+                <div class="w3-container w3-light-grey w3-round-xlarge">
                     <h3 class="tx-hammer"><b><?php echo basename($year) ?></b></h4>
                     <?php
                         //Finds all posts in the year and sorts by modified time.
@@ -57,12 +57,22 @@
                     ?>
                     <!-- Returns all posts in the year sorted by last modified. -->
                     <?php foreach ($posts as $post) { ?>
-                        <p>
-                            <img class="w3-round-xlarge w3-image w3-card-4" style="width:128px" src="<?php echo get_picture_from_post($post); ?>">
-                            <span class="w3-tag w3-round w3-orange"><?php echo date("F jS, Y", filemtime($post)) ?></span>
-                            <span class="w3-tag w3-round w3-light-grey"><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></span>
-                            <br>
-                        </p>
+                        <div class="w3-container w3-padding-16 w3-mobile">
+                            <a href="<?php echo $post ?>">
+                                <section class="w3-container w3-button cs-hover-shadow-8 w3-row-padding w3-padding-8 w3-card-4 w3-white w3-round-xlarge" style="width:100%">
+                                    <div class="w3-third w3-center">
+                                        <a href="<?php echo $post ?>"><img class="w3-round-xlarge w3-image" style="height:128px" src="<?php echo get_picture_from_post($post) ?>"></a>
+                                    </div>
+                                    <div class="w3-twothird">
+                                        <p>
+                                            <span class="w3-tag w3-round w3-light-grey"><?php echo date("F jS, Y", filemtime($post)) ?></span>
+                                            <br>
+                                            <span class="w3-tag w3-round w3-light-grey"><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></span>
+                                        </p>
+                                    </div>
+                                </section>
+                            </a>
+                        </div>
                     <?php } ?>
                 </div>
                 <?php } ?>
