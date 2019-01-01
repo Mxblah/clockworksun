@@ -6,7 +6,8 @@
             echo "$file does not exist or cannot be opened.";
             return false;
         } else {
-            $pattern = 'background: (url\("(.*)"\))';
+            $pattern = '#background: (url\("(.*)"\))#';
+            $matches = [];
             $url = "";
             $found = false;
             //Iterates through the file line by line until a regex match is found

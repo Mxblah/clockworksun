@@ -26,6 +26,9 @@
 
         <!-- Main page content -->
         <main id="mainContent" class="site-content">
+
+            <!-- PHP inclusion section -->
+            <?php include($_SERVER['DOCUMENT_ROOT']."/scripts/get-picture-from-post.php") ?>
             
             <!-- Disclaimer section -->
             <section class="w3-container w3-content w3-row-padding cs-padding-top-32">
@@ -55,6 +58,7 @@
                     <!-- Returns all posts in the year sorted by last modified. -->
                     <?php foreach ($posts as $post) { ?>
                         <p>
+                            <img class="w3-round-xlarge w3-image w3-card-4" style="width:128px" src="<?php echo get_picture_from_post($post); ?>">
                             <span class="w3-tag w3-round w3-orange"><?php echo date("F jS, Y", filemtime($post)) ?></span>
                             <span class="w3-tag w3-round w3-light-grey"><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></span>
                             <br>
