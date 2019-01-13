@@ -45,5 +45,9 @@
     padding-bottom: 32px;
 }
 
+.cs-padding-bottom-64 {
+    padding-bottom: 64px;
+}
+
 /* - Custom element hiding */
 @media (max-width:1200px){.cs-hide-1200{display:none!important}}

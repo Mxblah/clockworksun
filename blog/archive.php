@@ -21,7 +21,7 @@
         <!-- Header -->
         <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
             <h1 class="w3-xxxlarge tx-hammer"><br><b>CLOCKWORK SUN BLOG</b></h1>
-            <h4 class="tx-hammer"><b>ARCHIVE (BETA)</b></h4>
+            <h4 class="tx-hammer"><b>ARCHIVES</b></h4>
         </header>
 
         <!-- Main page content -->
@@ -32,12 +32,12 @@
             
             <!-- Disclaimer section -->
             <section class="w3-container w3-content w3-row-padding cs-padding-top-32">
-                <h3 class="tx-hammer">Sorry it's a little rough.</h3>
-                <p>I'm working on cleaning up this page and making it better, but for now, it's functional. More updates soon!<br>Latest post on top, oldest on bottom.</p>
+                <h3 class="tx-hammer">Welcome to the archives</h3>
+                <p>Currently, all posts are displayed.<br>Latest post on top, oldest on bottom.<br><span class="w3-text-grey">Link to the <a href="/archive-basic">basic HTML archives</a> for those with slow connections or who don't like cards.</span></p>
             </section>
 
             <!-- Link section -->
-            <section class="w3-container w3-content w3-row-padding w3-padding-64 w3-light-grey">
+            <section class="w3-container w3-content w3-row-padding cs-padding-bottom-64 w3-light-grey">
                 <?php
                     //Declares HTML as the suffix to strip from names
                     $suffix = '.html';
@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="w3-twothird">
                                         <p class="w3-large">
-                                            <?php echo date("F jS, Y", filemtime($post)) ?>
+                                            <span class="w3-text-grey"><?php echo date("F jS, Y", filemtime($post)) ?></span>
                                             <br>
                                             <?php echo basename($post, $suffix) ?>
                                         </p>
