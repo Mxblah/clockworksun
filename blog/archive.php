@@ -33,7 +33,7 @@
             <!-- Disclaimer section -->
             <section class="w3-container w3-content w3-row-padding cs-padding-top-32">
                 <h3 class="tx-hammer">Welcome to the archives</h3>
-                <p>Currently, all posts are displayed.<br>Latest post on top, oldest on bottom.<br><span class="w3-text-grey">Link to the <a href="/archive-basic">basic HTML archives</a> for those with slow connections or who don't like cards.</span></p>
+                <p>Currently, all posts are displayed. In the future, if the archives grow too large, some posts may be hidden. <br>Newest post on top, oldest on bottom.<br><span class="w3-text-grey">Link to the <a href="/archive-basic">basic HTML archives</a> for those with slow connections.</span></p>
             </section>
 
             <!-- Link section -->
