@@ -37,7 +37,7 @@
             </section>
 
             <!-- Link section -->
-            <section class="w3-container w3-content w3-row-padding w3-padding-64">
+            <section class="w3-container w3-content w3-row-padding w3-padding-64 w3-light-grey">
                 <?php
                     //Declares HTML as the suffix to strip from names
                     $suffix = '.html';
@@ -46,7 +46,7 @@
                     rsort($years);
                     foreach ($years as $year) {
                 ?>
-                <div class="w3-container w3-light-grey w3-round-xlarge">
+                <div class="w3-container">
                     <h3 class="tx-hammer"><b><?php echo basename($year) ?></b></h4>
                     <?php
                         //Finds all posts in the year and sorts by modified time.
@@ -59,18 +59,18 @@
                     <?php foreach ($posts as $post) { ?>
                         <div class="w3-container w3-padding-16 w3-mobile">
                             <a href="<?php echo $post ?>">
-                                <section class="w3-container w3-button cs-hover-shadow-8 w3-row-padding w3-padding-8 w3-card-4 w3-white w3-round-xlarge" style="width:100%">
+                                <div class="w3-container w3-button cs-hover-shadow-8 w3-row-padding w3-padding-8 w3-card-4 w3-white w3-round-xlarge" style="width:100%">
                                     <div class="w3-third w3-center">
-                                        <a href="<?php echo $post ?>"><img class="w3-round-xlarge w3-image" style="height:128px" src="<?php echo get_picture_from_post($post) ?>"></a>
+                                        <img class="w3-round-xlarge w3-image" style="height:128px" src="<?php echo get_picture_from_post($post) ?>">
                                     </div>
                                     <div class="w3-twothird">
-                                        <p>
-                                            <span class="w3-tag w3-round w3-light-grey"><?php echo date("F jS, Y", filemtime($post)) ?></span>
+                                        <p class="w3-large">
+                                            <?php echo date("F jS, Y", filemtime($post)) ?>
                                             <br>
-                                            <span class="w3-tag w3-round w3-light-grey"><a href="<?php echo $post ?>"><?php echo basename($post, $suffix) ?></a></span>
+                                            <?php echo basename($post, $suffix) ?>
                                         </p>
                                     </div>
-                                </section>
+                                 </div>
                             </a>
                         </div>
                     <?php } ?>
