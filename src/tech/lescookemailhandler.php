@@ -4,7 +4,7 @@
     $subject = htmlspecialchars($_POST['subject']);
 
     //Sets and opens the file containing the last email time.
-    $file = "lescookemailtime.txt"
+    $file = "lescookemailtime.txt";
     $stream = fopen($file,'w');
     if(!$stream) {
         echo "$file cannot be opened or cannot be created.";

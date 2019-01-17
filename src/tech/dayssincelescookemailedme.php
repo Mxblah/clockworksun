@@ -13,7 +13,7 @@
     <body id="MainPage" class="site">
 
         <!-- Navbar -->
-        <!--#include virtual="/navbar.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/navbar.html"); ?>
 
         <!-- Page Content -->
 
@@ -33,7 +33,7 @@
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <div class="w3-twothird">
                     <h1>Lorem Ipsum</h1>
-                    <h5 class="w3-padding-32 w3-margin-right"><span class="tx-hammer">It has been </span><h4 class="tx-hammer"><?php echo time_elapsed_string(filemtime(lescookemailtime.txt)) ?></h4> since Les Cook last emailed the students of Michigan Tech.</h5>
+                    <h5 class="w3-padding-32 w3-margin-right"><span class="tx-hammer">It has been </span><h4 class="tx-hammer"><?php echo time_elapsed_string(filemtime('lescookemailtime.txt')) ?></h4> since Les Cook last emailed the students of Michigan Tech.</h5>
                 </div>
 
                 <div class="w3-third w3-center">
@@ -46,7 +46,7 @@
         <!-- End Page Content -->
 
         <!-- Footer -->
-        <!--#include virtual="/footer.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/footer.html"); ?>
 
     </body>
 </html>
