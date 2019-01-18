@@ -32,7 +32,11 @@
             <!-- First Section -->
             <section class="w3-container w3-content w3-row-padding w3-padding-64">
                 <div class="w3-twothird">
-                    <h5 class="w3-padding-32 w3-margin-right"><span class="tx-hammer">It has been </span><h4 class="tx-hammer"><?php echo time_elapsed_string(date("c", filemtime('lescookemailtime.txt'))) ?></h4> since Les Cook last emailed the students of Michigan Tech.</h5>
+                    <h5 class="cs-padding-top-32 w3-margin-right"><span class="tx-hammer">It has been </span><h4 class="tx-hammer"><?php 
+                        $stream = fopen('lescookemailtime.txt', 'r');
+                        $time = fgets($stream);
+                        echo time_elapsed_string($time); 
+                    ?></h4> since Les Cook last emailed the students of Michigan Tech.</h5>
                 </div>
 
                 <div class="w3-third w3-center">
