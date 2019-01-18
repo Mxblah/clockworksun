@@ -36,11 +36,12 @@
                         $stream = fopen('lescookemailtime.txt', 'r');
                         $time = fgets($stream);
                         echo time_elapsed_string($time, true); 
-                    ?></h3> since Les Cook last emailed the students of Michigan Tech.</h5>
+                    ?></h3> since Les Cook last emailed the students of Michigan Tech.<br><br><span class="w3-small w3-text-grey">(RIP http://dayssincelescookemailed.me)<span></h5>
                 </div>
 
                 <div class="w3-third w3-center">
                     <a href="#"><img src="https://clockworksun.com/media/MTU_gold_400.jpg" alt="MTU" class="w3-round-xlarge w3-image w3-card-4 cs-hover-opacity-light"></a>
+                    <p class="w3-text-gray w3-tiny">This website is not affiliated with or operated by Michigan Technological University, whose logo appears above.</p>
                 </div>
             </section>
 
