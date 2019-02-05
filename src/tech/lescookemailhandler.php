@@ -1,4 +1,10 @@
 <?php
+
+    //Aborts if the secret key doesn't match.
+    if($_POST['secret'] != "THIS IS NOT THE SECRET KEY. THIS FILE SHOULD NOT BE PUSHED TO PRODUCTION.") {
+        exit("Secret key does not match.");
+    }
+
     //Converts the POST request to its component variables.
     $date = htmlspecialchars($_POST['date']);
     //$subject = htmlspecialchars($_POST['subject']);
