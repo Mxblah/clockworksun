@@ -45,7 +45,7 @@
                         $files = glob("$path/*");
                         sort($files);
                     ?>
-                    <!-- Returns all posts in the year sorted by last modified. -->
+                    <!-- Returns all files in the year sorted by last modified. -->
                     <?php foreach ($files as $file) { ?>
                         <p>
                             <span class="w3-text-grey"><?php echo date("F jS, Y", filemtime($file)) ?></span> | <a href="<?php echo $file ?>"><?php echo basename($file) ?></a>
