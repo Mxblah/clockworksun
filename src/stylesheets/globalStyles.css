@@ -37,6 +37,14 @@
 }
 
 /* - Custom spacing - */
+.cs-padding-top-16 {
+    padding-top: 16px;
+}
+
+.cs-padding-bottom-16 {
+    padding-bottom: 16px;
+}
+
 .cs-padding-top-32 {
     padding-top: 32px;
 }
