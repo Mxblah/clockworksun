@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Page template version 1.2.0 -->
+    <head>
+        <title>Clockwork Sun | Those that Lie Sleeping - Intel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+        <link rel="stylesheet" href="https://clockworksun.com/stylesheets/globalStyles.css">
+    </head>
+    <body id="MainPage" class="site">
+
+        <!-- Navbar -->
+        <!--#include virtual="/navbar.html" -->
+
+        <!-- Page Content -->
+
+        <!-- Header -->
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
+            <h1 class="w3-xxxlarge tx-hammer"><br><b>INTEL</b></h1>
+            <h4 class="tx-hammer"><b>THOSE THAT LIE SLEEPING</b></h4>
+        </header>
+
+        <!-- Main page content -->
+        <main id="mainContent" class="site-content">
+
+            <!-- Inventory Display Section -->
+            <section class="w3-cell-row w3-center w3-padding-64">
+                
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('bite').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Puncture wounds</b></h4>
+                    </button>
+                </div>
+
+            </section>
+
+            <!-- Modal section -->
+            <section>
+                <div id="bite" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('bite').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Puncture wounds</h5>
+                        <p class="cs-padding-bottom-16">Cass woke up in Ben's apartment after a significant fire with two puncture wounds just above her collarbone. A double syringe of poison? A vampire bite? An overly-enthusiastic doctor? Who's to know?</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <script>
+            //Gathers all modals into one list
+            var modals = document.getElementsByClassName('w3-modal');
+
+            //Checks to see what modal is open, then closes it if clicked outside of the modal.
+            window.onclick = function(event) {
+                for(var i = 0; i < modals.length; i++) {
+                    if(event.target == modals[i]) {
+                        modals[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+
+        <!-- End Page Content -->
+
+        <!-- Footer -->
+        <!--#include virtual="/footer.html" -->
+
+    </body>
+</html>
