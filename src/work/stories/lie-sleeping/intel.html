@@ -36,6 +36,12 @@
             <section class="w3-cell-row w3-center w3-padding-64">
                 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('fire').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Burned apartment</b></h4>
+                    </button>
+                </div>
+
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('puncture').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
                         <h4 class="tx-hammer w3-margin"><b>Puncture wounds</b></h4>
                     </button>
@@ -45,6 +51,14 @@
 
             <!-- Modal section -->
             <section>
+
+                <div id="puncture" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('fire').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Burned apartment</h5>
+                        <p class="cs-padding-bottom-16">Someone lit a fire in Ben's apartment last night. His notes on the cult are gone, turned to ash. Was this a simple mistake or drunken accident, or something more sinister?</p>
+                    </div>
+                </div>
 
                 <div id="puncture" class="w3-modal">
                     <div class="w3-modal-content w3-container w3-card-4">
