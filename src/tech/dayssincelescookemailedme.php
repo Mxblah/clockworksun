@@ -36,7 +36,7 @@
                         $stream = fopen('lescookemailtime.txt', 'r');
                         $time = fgets($stream);
                         echo time_elapsed_string($time, true); 
-                    ?></h3> since Les Cook last emailed the students of Michigan Tech.<br><br><span class="w3-small w3-text-grey">(RIP http://dayssincelescookemailed.me)<span></h5>
+                    ?></h3> since Les Cook last emailed the students of Michigan Tech.<br><br><span class="w3-text-grey">RIP Les Cook - <a href="https://www.mtech.edu/news/2019/04/041220191.html">gone but not forgotten.</a><br>This page will stay up to date as a monument to your #tenacity.</span></h5>
                 </div>
 
                 <div class="w3-third w3-center">
