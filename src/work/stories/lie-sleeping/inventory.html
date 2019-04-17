@@ -28,31 +28,67 @@
 
             <!-- Description section -->
             <section class="w3-container w3-content w3-row-padding cs-padding-top-32">
-                <h3 class="tx-hammer">Investigate your items...</h3>
-                <p>This page displays all the items Cass has collected over the course of the story. Click on an element for more information.<br><span class="w3-text-grey">Link to the <a href="intel">Intel page</a> or the <a href="/work/stories/lie-sleeping">main page of the story</a>.</span></p>
+                <h3 class="tx-hammer">Review your items...</h3>
+                <p>This page displays all the items Cass has collected over the course of the story that won't directly contribute to solving the mystery. Click on an element for more information.<br><span class="w3-text-grey">Link to the <a href="intel">Intel page</a> or the <a href="/work/stories/lie-sleeping">main page of the story</a>.</span></p>
             </section>
 
             <!-- Inventory Display section -->
             <section class="w3-cell-row w3-center w3-padding-64">
                 
-                <!--<div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
-                    <button onclick="document.getElementById('puncture').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
-                        <h4 class="tx-hammer w3-margin"><b>Puncture wounds</b></h4>
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('phone').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Phone</b></h4>
                     </button>
-                </div>-->
+                </div>
+
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('wallet').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Wallet</b></h4>
+                    </button>
+                </div>
+
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('keys').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Keys</b></h4>
+                    </button>
+                </div>
 
             </section>
 
             <!-- Modal section -->
             <section>
 
-                <!--<div id="puncture" class="w3-modal">
+                <div id="phone" class="w3-modal">
                     <div class="w3-modal-content w3-container w3-card-4">
-                        <span onclick="document.getElementById('puncture').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <h5 class="tx-hammer">Puncture wounds</h5>
-                        <p class="cs-padding-bottom-16">Cass woke up in Ben's apartment after a significant fire with two puncture wounds just above her collarbone. A double syringe of poison? A vampire bite? An overly-enthusiastic doctor? Who's to know?</p>
+                        <span onclick="document.getElementById('phone').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Phone</h5>
+                        <p class="cs-padding-bottom-16">Cass's trusty smartphone. Allows her to connect to the internet, take pictures, write notes, or even call people.<br>Important contacts:
+                            <ul>
+                                <li>Ben</li>
+                            </ul>
+                        </p>
                     </div>
-                </div>-->
+                </div>
+
+                <div id="wallet" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('wallet').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Wallet</h5>
+                        <p class="cs-padding-bottom-16">Cass's wallet. You know, for storing money and charge cards.<br>Current cash: $70</p>
+                    </div>
+                </div>
+
+                <div id="keys" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('keys').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Keys</h5>
+                        <p class="cs-padding-bottom-16">Assorted keys of various sizes, colors, and types. For unlocking doors.<br>Current access:
+                        <ul>
+                            <li>Cass's apartment</li>
+                            <li>Cass's car</li>
+                        </ul></p>
+                    </div>
+                </div>
 
             </section>
 
