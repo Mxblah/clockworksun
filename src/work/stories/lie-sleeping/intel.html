@@ -37,7 +37,7 @@
 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('fire').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
-                        <h4 class="tx-hammer w3-margin"><b>Burned apartment</b></h4>
+                        <h4 class="tx-hammer w3-margin"><b>Arson attacks</b></h4>
                     </button>
                 </div>
 
@@ -54,13 +54,19 @@
                 </div>
 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
-                    <button onclick="document.getElementById('nibbler').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
-                        <h4 class="tx-hammer w3-margin"><b>A fish?</b></h4>
+                    <button onclick="document.getElementById('floods').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Flooding</b></h4>
                     </button>
                 </div>
 
             </section>
             <section class="w3-cell-row w3-center cs-padding-bottom-64">
+
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('nibbler').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>A fish?</b></h4>
+                    </button>
+                </div>
 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('essence_salt').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
@@ -88,8 +94,12 @@
                 <div id="fire" class="w3-modal">
                     <div class="w3-modal-content w3-container w3-card-4">
                         <span onclick="document.getElementById('fire').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                        <h5 class="tx-hammer">Burned apartment</h5>
-                        <p class="cs-padding-bottom-16">Someone lit a fire in Ben's apartment the night of June 4th. His notes on the cult are gone, turned to ash. A second floor window was broken and there is blood on the table. A trail of ashen footprints leads to the bedroom. Was this a simple mistake, a drunken accident, or something more sinister?</p>
+                        <h5 class="tx-hammer">Arson attacks</h5>
+                        <p class="cs-padding-bottom-16">Multiple victims have been claimed in arson attacks across the city. Notable cases include:<br>
+                        <ul>
+                            <li>June 4th: Ben's apartment, an investigative journalist and friend of Cass.</li>
+                            <li>June 5th: The city archives, leaving a historian and librarian dead.</li>
+                        </ul></p>
                     </div>
                 </div>
 
@@ -106,6 +116,14 @@
                         <span onclick="document.getElementById('dream-starsea-1').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h5 class="tx-hammer">A dream of a starry sea</h5>
                         <p class="cs-padding-bottom-16">Cass passed out part way through investigating Ben's burned apartment and dreamt of an impossibly clear ocean above a starry void and below a shining aurora. A cityscape glowed in the distance. A small green fish attacked her. The wounds carried into the waking world.</p>
+                    </div>
+                </div>
+
+                <div id="floods" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('floods').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Flooding</h5>
+                        <p class="cs-padding-bottom-16">Unseasonable rains leading to flooding have been reported across the city recently. A new addition to the subway system is threatened by the floods.</p>
                     </div>
                 </div>
 
