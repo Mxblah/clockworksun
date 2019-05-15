@@ -33,7 +33,7 @@
             </section>
 
             <!-- Inventory Display section -->
-            <section class="w3-cell-row w3-center w3-padding-64">
+            <section class="w3-cell-row w3-center cs-padding-top-64">
                 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('phone').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
@@ -50,6 +50,16 @@
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('keys').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
                         <h4 class="tx-hammer w3-margin"><b>Keys</b></h4>
+                    </button>
+                </div>
+
+            </section>
+
+            <section class="w3-cell-row w3-center cs-padding-bottom-64">
+                
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('spell_essentia').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Spell: Prepare Essentia Salt</b></h4>
                     </button>
                 </div>
 
@@ -89,6 +99,14 @@
                             <li>Cass's apartment</li>
                             <li>Cass's car</li>
                         </ul></p>
+                    </div>
+                </div>
+
+                <div id="keys" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('spell_essentia').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Spell: Prepare Essentia Salt</h5>
+                        <p class="cs-padding-bottom-16">A ritual to perform in order to prepare an essentia salt from an inanimate object. Now, how did it go again?</p>
                     </div>
                 </div>
 
