@@ -5,8 +5,20 @@
     <title>Clockwork Sun | The Crystalline Sun | Full Story</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+    <link rel="stylesheet" href="https://clockworksun.com/stylesheets/globalStyles.css">
 
     <style>
+
+/* === Controls the featured image === */
+header {
+    background: url("https://clockworksun.com/media/star-night-sky-full.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
         /* === GENERAL === */
 
 @font-face {
@@ -478,18 +490,43 @@ a {
     </script>
 </head>
 <body>
-    
-<div class="info">
-    <div class="info__guild-icon-container">
-        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/307874761252274178/4b3f0739b5dd8ebee7c9aa5bb0ba5ab2.png" />
-    </div>
-    <div class="info__metadata">
-        <div class="info__guild-name">MTU Huskies</div>
-        <div class="info__channel-name">the_crystalline_sun</div>
-        
-            <div class="info__channel-topic">The story of the crystalline sun. This story was run from 1/20/19 to 3/27/19.</div>
+    <!-- Navbar -->
+        <!--#include virtual="/navbar.html" -->
 
-        <div class="info__channel-message-count">67 messages</div>
+        <!-- Page Content -->
+
+        <!-- Header -->
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32 w3-cell-row" style="height:100vh">
+                <div class="w3-cell w3-cell-bottom">
+                    <h1 class="w3-xxxlarge tx-hammer w3-text-white"><br><b>THE CRYSTALLINE SUN</b></h1>
+                    <h4 class="tx-hammer w3-text-white"><b>FULL STORY</b></h4>
+                </div>
+            </header>
+    
+            <!-- Main page content -->
+            <main id="mainContent" class="site-content">
+    
+                <!-- Post content -->
+                <section class="w3-container w3-content w3-row-padding w3-padding-64">
+                        <!-- Author block -->
+                        <div class="w3-cell-row cs-padding-bottom-32">
+                            <div class="w3-container w3-cell" style="width:128px"><a href="/staff/shaun"><img src="https://clockworksun.com/media/clockworksun-512.png" alt="Clockwork Sun" class="w3-round-xlarge w3-image w3-card-4 cs-hover-opacity-light"></a></div>
+                            <div class="w3-cell w3-container"><p>Posted by <a href="/staff/shaun">Shaun</a><br><span class="w3-text-grey">Last Updated: <!--#config timefmt="%F" --> <!--#echo var="LAST_MODIFIED" --></span></p></div>
+                        </div>
+                        
+                        <!-- Post content -->
+                        <article>
+<div class="info">
+    <!--<div class="info__guild-icon-container">
+        <img class="info__guild-icon" src="https://cdn.discordapp.com/icons/307874761252274178/4b3f0739b5dd8ebee7c9aa5bb0ba5ab2.png" />
+    </div>-->
+    <div class="info__metadata">
+        <!--<div class="info__guild-name">MTU Huskies</div>
+        <div class="info__channel-name">the_crystalline_sun</div>-->
+        
+            <div class="info__channel-topic cs-padding-bottom-32">The full story of the Crystalline Sun. This story was run from January 20th 2019 to March 27th 2019 and was originally posted on the <a href="https://discord.gg/Nrd5Cbx">MTU Huskies Discord server.</a></div>
+
+        <div class="info__channel-message-count">This story is 28 updates long, spread over 40 standard pages with a total of over 15000 words.<br>Note that some reaction counts may not be exact, as voters may have changed their reactions between the close of voting and the time this story was scraped from the server.</div>
         
     </div>
 </div>
@@ -2819,6 +2856,18 @@ Thanks a lot for your support and engagement and I hope you stick around for the
             </div>
         </div>
 </div>
+
+</article>    
+
+</section>
+
+</main>
+
+<!-- End Page Content -->
+
+<!-- Footer -->
+<!--#include virtual="/footer.html" -->
+
 
 </body>
 </html>
