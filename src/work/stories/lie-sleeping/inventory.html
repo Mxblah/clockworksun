@@ -36,6 +36,12 @@
             <section class="w3-cell-row w3-center cs-padding-top-64">
                 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('sanity').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Sanity</b></h4>
+                    </button>
+                </div>
+                
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('phone').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
                         <h4 class="tx-hammer w3-margin"><b>Phone</b></h4>
                     </button>
@@ -73,6 +79,18 @@
 
             <!-- Modal section -->
             <section>
+
+                <div id="sanity" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('sanity').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Sanity</h5>
+                        <p class="cs-padding-bottom-16">A general measure of Cass's state of mind. Delving too deep into these mysteries can have a powerful impact on a person's psyche.<br><br>
+                        Current status: <i>Nagging whispers...</i>
+                        <br><br>
+                        Not at a dangerous level... yet.
+                        </p>
+                    </div>
+                </div>
 
                 <div id="phone" class="w3-modal">
                     <div class="w3-modal-content w3-container w3-card-4">
@@ -112,7 +130,20 @@
                     <div class="w3-modal-content w3-container w3-card-4">
                         <span onclick="document.getElementById('spell_essentia').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h5 class="tx-hammer">Spell: Prepare Essentia Salt</h5>
-                        <p class="cs-padding-bottom-16">A ritual to perform in order to prepare an essentia salt from an inanimate object. Now, how did it go again?</p>
+                        <p class="cs-padding-bottom-16">A ritual to perform in order to prepare an essentia salt from an object or creature. The procedure is as follows:<br><br>
+                            <i>
+                                Place the object to be converted into a bowl or similar device.<br>
+                                Wet the rim of the bowl and outermost edges of the object with pure water, then with a dilute saline solution, then with oil pressed from olives.<br>
+                                Gently sprinkle the object with rock salt, then with potash of sulfur. Take care to avoid excess.<br>
+                                Prepare a solution of concentrated aqua fortis, fortified with a drop of the sap of the invoker's veins (for animate objects only), and incant the following lines: <br><br>
+                                <em>“in fines tuos elementa<br>
+                                materiae resolvi<br>
+                                adsolati sunt cogitatio (for animate objects only)<br>
+                                y’ah no-sol’ol’ahn ieh<br>
+                                UAEE”</em><br><br>
+                                Upon utterance of the final syllable, hold the sound and pour in the acid. Continue to hold the sound until the substance has dissolved into its essentia. In the event the substance has not dissolved, repeat the incantation and add more aqua fortis. Repeat this process up to seven times until substance has dissolved.
+                            </i>
+                        </p>
                     </div>
                 </div>
 
