@@ -88,7 +88,13 @@
 
             </section>
 
-            <section class="w3-cell-row w3-center cs-padding-bottom-64">
+            <section class="w3-cell-row w3-center">
+
+                <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                    <button onclick="document.getElementById('shades').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                        <h4 class="tx-hammer w3-margin"><b>Shadows</b></h4>
+                    </button>
+                </div>
 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('essence_salt').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
@@ -107,6 +113,10 @@
                         <h4 class="tx-hammer w3-margin"><b>Broken syringes</b></h4>
                     </button>
                 </div>
+
+            </section>
+
+            <section class="w3-cell-row w3-center cs-padding-bottom-64">
 
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('students_1').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
@@ -184,6 +194,14 @@
                         <span onclick="document.getElementById('voidheart').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h5 class="tx-hammer">Void Heart</h5>
                         <p class="cs-padding-bottom-16">A large pulsating semi-purple sack connected to dozens of tendrils throughout an area. Seems capable of connecting to living creatures to some end. Appears to produce fog or haze. Can puppet victims and use their memories to impersonate them and lure additional creatures into the plant's reach.</p>
+                    </div>
+                </div>
+
+                <div id="shade" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('shade').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Shadows</h5>
+                        <p class="cs-padding-bottom-16">Cass has had a dream of clinging, crawling shadows that were extraordinarily aggressive but sensitive to the light pouring from her neck.</p>
                     </div>
                 </div>
 
