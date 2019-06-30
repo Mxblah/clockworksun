@@ -118,6 +118,12 @@
 
             <section class="w3-cell-row w3-center cs-padding-bottom-64">
 
+                    <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
+                        <button onclick="document.getElementById('stakes').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
+                            <h4 class="tx-hammer w3-margin"><b>Stakes</b></h4>
+                        </button>
+                    </div>
+
                 <div class="w3-container w3-cell w3-mobile w3-padding-16" style="width:22%">
                     <button onclick="document.getElementById('students_1').style.display='block'" class="w3-container w3-button w3-card-4 w3-round-xlarge w3-hover-white" style="width:100%">
                         <h4 class="tx-hammer w3-margin"><b>Three students</b></h4>
@@ -137,6 +143,7 @@
                         <ul>
                             <li>June 4th: Ben's apartment, an investigative journalist and friend of Cass.</li>
                             <li>June 5th: The city archives, leaving a historian and librarian dead and several artifacts destroyed.</li>
+                            <li>June 8th: A block of low-income apartments in the city slums. Dozens died.</li>
                         </ul></p>
                     </div>
                 </div>
@@ -197,11 +204,11 @@
                     </div>
                 </div>
 
-                <div id="shade" class="w3-modal">
+                <div id="shades" class="w3-modal">
                     <div class="w3-modal-content w3-container w3-card-4">
-                        <span onclick="document.getElementById('shade').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <span onclick="document.getElementById('shades').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h5 class="tx-hammer">Shadows</h5>
-                        <p class="cs-padding-bottom-16">Cass has had a dream of clinging, crawling shadows that were extraordinarily aggressive but sensitive to the light pouring from her neck.</p>
+                        <p class="cs-padding-bottom-16">Cass has had a dream of clinging, crawling shadows that were extraordinarily aggressive but sensitive to the light pouring from her neck. Seem capable of affecting the physical world, at least in a limited fashion.</p>
                     </div>
                 </div>
 
@@ -226,6 +233,14 @@
                         <span onclick="document.getElementById('syringe').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h5 class="tx-hammer">Broken syringes</h5>
                         <p class="cs-padding-bottom-16">A handful of small glass syringes in various states of damage. Some still contain a light red residue. Found in Ben's apartment with the ashen body.<br>Biers states they contain chemicals related to dreaming and the controlling thereof.</p>
+                    </div>
+                </div>
+
+                <div id="stakes" class="w3-modal">
+                    <div class="w3-modal-content w3-container w3-card-4">
+                        <span onclick="document.getElementById('stakes').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h5 class="tx-hammer">Metal stakes</h5>
+                        <p class="cs-padding-bottom-16">Heavy steel stakes, found driven into the ground around Cass's apartment after a series of troubling dreams. Seem capable of controlling dreams, at least partially. Found after a boy's recent suicide and traced back to a particular foundry near New Brighton.</p>
                     </div>
                 </div>
 
