@@ -10,6 +10,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
         <link rel="stylesheet" href="https://clockworksun.com/stylesheets/globalStyles.css">
     </head>
+    <style>
+        .thumb {
+            object-fit: cover;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
     <body id="MainPage" class="site">
 
         <!-- Navbar -->
@@ -32,7 +39,14 @@
             <!-- First Section -->
             <section class="w3-cell-row w3-center w3-padding-64">
 
-                <p>todo</p>
+            <?php
+                //Grabs all categories in the photos directory and treats them separately
+                $tags = glob("photos/*");
+                foreach ($tags as $tag) {
+                    //Gets the latest image as the thumbnail and displays it ?>
+                    <img class="w3-image thumb" src="<?php echo get_thumb_from_folder($tag) ?>">
+
+                <?php } ?>
 
             </section>
 
