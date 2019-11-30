@@ -13,7 +13,7 @@
     <body id="MainPage" class="site">
 
         <!-- Navbar -->
-        <!--#include virtual="/navbar.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/navbar.html"); ?>
 
         <!-- Page Content -->
 
@@ -29,7 +29,7 @@
             <!-- First Section -->
             <section class="w3-cell-row w3-center w3-padding-64">
 
-                
+                <p>todo</p>
 
             </section>
 
@@ -38,7 +38,7 @@
         <!-- End Page Content -->
 
         <!-- Footer -->
-        <!--#include virtual="/footer.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/footer.html"); ?>
 
     </body>
 </html>
