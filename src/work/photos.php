@@ -23,6 +23,9 @@
             <h4 class="tx-hammer"><b>STILL IN BETA. BETTER PAGE COMING EVENTUALLY</b></h4>
         </header>
 
+        <!-- PHP inclusion section -->
+        <?php include($_SERVER['DOCUMENT_ROOT']."/scripts/get_thumb_from_folder.php") ?>
+
         <!-- Main page content -->
         <main id="mainContent" class="site-content">
 
