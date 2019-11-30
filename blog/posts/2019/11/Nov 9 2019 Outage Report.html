@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Post template version 1.1.0 -->
+    <head>
+        <title>Clockwork Sun Blog | Nov 9 2019 Outage Report</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
+        <link rel="stylesheet" href="https://clockworksun.com/stylesheets/globalStyles.css">
+        <!-- Controls the featured image -->
+        <style>
+            header {
+                background: url("https://clockworksun.com/media/clockworksun-full.png") no-repeat center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+        </style>
+    </head>
+    <body id="MainPage" class="site">
+
+        <!-- Navbar -->
+        <!--#include virtual="/navbar.html" -->
+
+        <!-- Page Content -->
+
+        <!-- Header -->
+        <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32 w3-cell-row" style="height:100vh">
+            <div class="w3-cell w3-cell-bottom">
+                <h1 class="w3-xxxlarge tx-hammer w3-text-white"><br><b>NOV 9 2019 OUTAGE REPORT</b></h1>
+                <h4 class="tx-hammer w3-text-white"><b>A DELAYED POST-MORTEM</b></h4>
+            </div>
+        </header>
+
+        <!-- Main page content -->
+        <main id="mainContent" class="site-content w3-light-grey">
+
+            <!-- Post content -->
+            <section class="w3-container w3-content w3-row-padding w3-padding-64 w3-white">
+                    <!-- Author block -->
+                    <div class="w3-cell-row cs-padding-bottom-32">
+                        <div class="w3-container w3-cell" style="width:128px"><a href="/staff/shaun"><img src="https://clockworksun.com/media/clockworksun-512.png" alt="Clockwork Sun" class="w3-round-xlarge w3-image w3-card-4 cs-hover-opacity-light"></a></div>
+                        <div class="w3-cell w3-container"><p>Posted by <a href="/staff/shaun">Shaun</a><br><span class="w3-text-grey">Last Updated: <!--#config timefmt="%F" --> <!--#echo var="LAST_MODIFIED" --></span></p></div>
+                    </div>
+                    
+                    <!-- Post content -->
+                    <article>
+                            <p>On November 9th of 2019, there was a pretty complete outage of all services I provide via the Clockworksun Network. So, what happened?</p>
+                            <h3 class="tx-hammer">What happened</h3>
+                            <p>At around 4AM Eastern time on November 9th, 2019, a stick of RAM in one of the main hypervisors for the network failed. Even better, a maintenance cycle was running at the time, so several virtual servers had maintenance processes in the RAM that failed at the time. Several services thus immediately died, got hung up, or otherwise stopped working. One of these services was a network attached storage server (NAS) that serves web content to the multiple web servers I run.</p>
+                            <p>At 8AM, I woke up, and at 9:30 noticed that something was wrong. I investigated, immediately saw that the hypervisor thought it was missing a stick of RAM, and that it had noticed the deficit around 4 in the morning. I emailed the alerts list and began cleaning up; first restoring services that had been corrupted by the missing RAM, then shutting down the affected node and physically replacing the failed stick. This all took about an hour to go from zero to having the hypervisor back up with its full complement of RAM and beginning to see services return to operation.</p>
+                            <p>At this point, I noticed that the NAS had not come back up like the rest of the services. It turned out that it had been running a backup at the time, which had also been corrupted by the failed RAM stick. I had another backup from last week, but I wanted to try recovering the server without losing a week's worth of work first. I investigated the error codes given from the filesharing services and eventually tracked it down to a corrupted configuration file. After restoring just this one file, the server returned to full operation and the incident was resolved around 11AM, after some additional testing to ensure everything was working as expected.</p>
+                            <h3 class="tx-hammer">Root cause</h3>
+                            <p>The root cause of the incident was the failed stick of RAM that corrupted several processes during a maintenance window, including the backup I would have normally used to restore service. The secondary cause of the incident was the corrupted configuration file in the NAS, able to be restored from a previous uncorrupted backup.</p>
+                            <h3 class="tx-hammer">Measures taken</h3>
+                            <p>In order to prevent an incident like this from happening again, I have taken the following measures:</p>
+                            <ul>
+                              <li>Enabled additional notifications and monitoring systems to check for hardware failures and failures of maintenance jobs. (Gmail had apparently been eating these automated reports as "spam" for quite some time)</li>
+                              <li>Stocked up on spare RAM sticks to be able to replace any additional failed hardware.</li>
+                              <li>Began making plans to migrate the NAS to a different, more streamlined system, as the current server is relatively complex and difficult to troubleshoot.</li>
+                            </ul>
+                            <p>If you have any other questions or concerns about the outage, feel free to email <a href="mailto:admin@clockworksun.com">admin@clockworksun.com.</a></p>
+                            <ul>
+                            </ul>
+                    </article>    
+
+            </section>
+
+        </main>
+
+        <!-- End Page Content -->
+
+        <!-- Footer -->
+        <!--#include virtual="/footer.html" -->
+
+    </body>
+</html>
