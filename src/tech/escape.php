@@ -13,7 +13,7 @@
     <body id="MainPage" class="site">
 
         <!-- Navbar -->
-        <!--#include virtual="/navbar.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/navbar.html"); ?>
 
         <!-- Page Content -->
 
@@ -48,7 +48,7 @@
         <!-- End Page Content -->
 
         <!-- Footer -->
-        <!--#include virtual="/footer.html" -->
+        <?php include ($_SERVER['DOCUMENT_ROOT']."/footer.html"); ?>
 
     </body>
 </html>
