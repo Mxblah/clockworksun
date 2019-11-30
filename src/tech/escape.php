@@ -2,7 +2,7 @@
 <html lang="en">
     <!-- Page template version 1.2.0 -->
     <head>
-        <title>Clockwork Sun - How long until I escape Houghton</title>
+        <title>Clockwork Sun - How long until I can escape Houghton</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
