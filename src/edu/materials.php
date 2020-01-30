@@ -42,7 +42,7 @@
 
                     //Aborts if path still ends up outside of the expected directory
                     if (strpos($path, ($_SERVER['DOCUMENT_ROOT'])) !== 0) {
-                        http_response_code(500);
+                        http_response_code(403);
                         echo "Invalid path specified";
                         exit(1);
                     }
