@@ -37,6 +37,15 @@
                 <?php
                     //Declares a sanitized GET input as the directory to search.
                     $path=htmlspecialchars($_GET["path"]);
+                    //Absoluteifies path to ensure it's contained to the web server directory
+                    $path=realpath(($_SERVER['DOCUMENT_ROOT']).$path);
+
+                    //Aborts if path still ends up outside of the expected directory
+                    if (strpos($path, ($_SERVER['DOCUMENT_ROOT'])) !== 0) {
+                        http_response_code(500);
+                        echo "Invalid path specified";
+                        exit(1);
+                    }
                 ?>
                 <div class="w3-container">
                     <h3 class="tx-hammer"><b><?php echo basename($path) ?></b></h4>
@@ -46,9 +55,11 @@
                         sort($files);
                     ?>
                     <!-- Returns all files in the year sorted by last modified. -->
-                    <?php foreach ($files as $file) { ?>
+                    <?php foreach ($files as $file) { 
+                        $tfile = str_replace(($_SERVER['DOCUMENT_ROOT']), "", $file);
+                        ?>
                         <p>
-                            <span class="w3-text-grey"><?php echo date("F jS, Y", filemtime($file)) ?></span> | <a href="<?php echo $file ?>"><?php echo basename($file) ?></a>
+                            <span class="w3-text-grey"><?php echo date("F jS, Y", filemtime($file)) ?></span> | <a href="<?php echo $tfile ?>"><?php echo basename($file) ?></a>
                         </p>
                     <?php } ?>
                 </div>
