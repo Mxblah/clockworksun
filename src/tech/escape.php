@@ -20,7 +20,7 @@
         <!-- Header -->
         <header id="mainHeader" class="w3-container w3-center w3-orange w3-padding-32">
             <h1 class="w3-xxxlarge tx-hammer"><br><b>GRADUATION TIMER</b></h1>
-            <h4 class="tx-hammer"><b>HOW LONG UNTIL I CAN ESCAPE HOUGHTON</b></h4>
+            <h4 class="tx-hammer"><b>HOW LONG I'VE BEEN FREE</b></h4>
         </header>
 
         <!-- Main page content -->
@@ -36,9 +36,10 @@
                     <h2 class="tx-hammer w3-center w3-jumbo"><?php
                         $time = "Sat, 19 Dec 2020 10:30:00 -0500 (EST)";
                         echo time_elapsed_string($time, true);
+                        echo " ago,"
                     ?></h2>
                 </div>
-                <h3 class="cs-padding-top-32 w3-center">remain before I graduate from college and can escape Houghton, MI.</h3>
+                <h3 class="cs-padding-top-32 w3-center">I graduated from college.</h3>
             </section>
             </div>
 
